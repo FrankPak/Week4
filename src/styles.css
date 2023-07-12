@@ -23,12 +23,22 @@ body {
   width: 100%;
 }
 
-@media only screen and (width >= 800) {
+@media only screen and (width > 800) {
   .show-data {
     display: flex;
   }
 
   .show-info {
+    padding: 10px;
+  }
+}
+
+@media only screen and (width < 800) {
+  img {
+    margin: auto;
+  }
+  .show-info p {
+    text-align: center;
     padding: 10px;
   }
 }
