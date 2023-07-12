@@ -23,7 +23,7 @@ body {
   width: 100%;
 }
 
-@media only screen and (width > 800) {
+@media only screen and (min-width: 800px) {
   .show-data {
     display: flex;
   }
@@ -33,7 +33,7 @@ body {
   }
 }
 
-@media only screen and (width < 800) {
+@media only screen and (max-width: 800px) {
   img {
     margin: auto;
   }
