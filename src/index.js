@@ -1,4 +1,3 @@
-import "./styles.css";
 const sendBtn = document.getElementById("submit-data");
 sendBtn.addEventListener("click", getData);
 
