@@ -1,5 +1,8 @@
 const sendBtn = document.getElementById("submit-data");
-sendBtn.addEventListener("click", getData);
+sendBtn.addEventListener("click", (event) => {
+  getData();
+  event.preventDefault();
+});
 
 async function getData() {
   const url = "https://api.tvmaze.com/search/shows?q=";
@@ -40,5 +43,4 @@ async function getData() {
 
     console.log(show.show);
   });
-  console.log();
 }
