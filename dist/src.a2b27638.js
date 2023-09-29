@@ -129,19 +129,20 @@ function getData() {
 }
 function _getData() {
   _getData = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-    var url, inputShow, showData, ShowJSON;
+    var url, inputShow, showCont, showData, ShowJSON;
     return _regeneratorRuntime().wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
         case 0:
           url = "https://api.tvmaze.com/search/shows?q=";
           inputShow = document.getElementById("input-show").value;
-          _context.next = 4;
+          showCont = document.getElementById("show-container");
+          _context.next = 5;
           return fetch(url + inputShow);
-        case 4:
+        case 5:
           showData = _context.sent;
-          _context.next = 7;
+          _context.next = 8;
           return showData.json();
-        case 7:
+        case 8:
           ShowJSON = _context.sent;
           ShowJSON.forEach(function (show) {
             var div1 = document.createElement("div");
@@ -162,11 +163,11 @@ function _getData() {
             div2.append(h1);
             div2.append(summary);
             div1.append(div2);
-            document.body.appendChild(div1);
+            showCont.append(div1);
             console.log(show.show);
           });
           console.log();
-        case 10:
+        case 11:
         case "end":
           return _context.stop();
       }

@@ -4,6 +4,7 @@ sendBtn.addEventListener("click", getData);
 async function getData() {
   const url = "https://api.tvmaze.com/search/shows?q=";
   let inputShow = document.getElementById("input-show").value;
+  let showCont = document.getElementById("show-container");
   const showData = await fetch(url + inputShow);
   const ShowJSON = await showData.json();
 
@@ -31,7 +32,7 @@ async function getData() {
 
     div1.append(div2);
 
-    document.body.appendChild(div1);
+    showCont.append(div1);
 
     console.log(show.show);
   });
