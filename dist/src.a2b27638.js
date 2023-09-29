@@ -135,7 +135,7 @@ function _getData() {
         case 0:
           url = "https://api.tvmaze.com/search/shows?q=";
           inputShow = document.getElementById("input-show").value;
-          showCont = document.getElementById("show-container");
+          showCont = document.getElementById("container");
           _context.next = 5;
           return fetch(url + inputShow);
         case 5:
