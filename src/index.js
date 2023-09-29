@@ -8,6 +8,10 @@ async function getData() {
   const showData = await fetch(url + inputShow);
   const ShowJSON = await showData.json();
 
+  while (showCont.firstChild) {
+    showCont.removeChild(showCont.lastChild);
+  }
+
   ShowJSON.forEach((show) => {
     let div1 = document.createElement("div");
     let div2 = document.createElement("div");
