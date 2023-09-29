@@ -13,16 +13,15 @@
   <script src="/styles.dd855970.js"></script></head>
 
   <body>
-    <nav class="navbar bg-light">>
-      <div class="container-fluid">
-        <a class="navbar-brand">Navbar</a>
+    <nav class="navbar bg-light">
+      <div class="container-fluid d-flex">
         <form class="d-flex" role="search">
-        <input type="search" id="input-show" value="">
-        <button id="submit-data">Send</button>
-
-      </form>
-    </div>
-
+          <input id="input-show" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="submit-data" class="btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
     </nav>
     <div id="container" class="show-container"></div>
 
