@@ -144,6 +144,9 @@ function _getData() {
           return showData.json();
         case 8:
           ShowJSON = _context.sent;
+          while (showCont.firstChild) {
+            showCont.removeChild(showCont.lastChild);
+          }
           ShowJSON.forEach(function (show) {
             var div1 = document.createElement("div");
             var div2 = document.createElement("div");
@@ -167,7 +170,7 @@ function _getData() {
             console.log(show.show);
           });
           console.log();
-        case 11:
+        case 12:
         case "end":
           return _context.stop();
       }
